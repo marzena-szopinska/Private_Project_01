@@ -47,6 +47,15 @@ footer {
   background-color: #212121;
 }
 
+.arrow {
+  width: 50px;
+  /* center the svg */
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 769px) {
   .container {
