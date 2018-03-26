@@ -7,6 +7,8 @@ body {
   font-size: 1em;
   color: #121212;
   background-color: #E3E3E3;
+  line-height: 1.5;
+  letter-spacing: 0.065em;
 }
 
 figure {
@@ -22,6 +24,7 @@ header, footer {
 }
 
 header {
+  color: #fff;
   padding-bottom: 1em;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/background.jpeg');
   background-size: cover;
@@ -42,7 +45,50 @@ footer {
   padding: 2em 1em;
 }
 
-.nav-bar, footer {
+.nav-bar {
+  width: 80%;
+  text-align: center;
+    /* center the svg */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-bar p {
+  margin-bottom: 20px;
+  font-size: 0.875em;
+  font-style: italic;
+  color: rgba(255, 255, 255, .6);
+}
+
+.nav-bar h1 {
+  margin-bottom: 0;
+}
+
+.nav-bar li {
+  /* remove default bullets */
+  list-style-type: none;
+  margin-bottom: 4px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  background-color: rgba(255,255,255,.2);
+  color: #fff;
+}
+
+.nav-bar ul {
+  /* remove list default left padding */
+  padding-left: 0;
+  width: 50%;
+  /* center the list */
+  margin: 0 auto;
+}
+
+footer {
   color: #fff;
   background-color: #212121;
 }
@@ -51,9 +97,9 @@ footer {
   width: 50px;
   /* center the svg */
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 
 /* MEDIA QUERIES */
