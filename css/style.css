@@ -39,10 +39,14 @@ header, footer {
   margin-top: 0;
 }
 
+.logo {
+  display: none;
+}
+
 .nav-bar {
   width: 80%;
   text-align: center;
-    /* center the svg */
+  /* center the svg */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,6 +93,27 @@ header, footer {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  /* pulsate the arrow icon */
+  -webkit-animation: arrow 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.xxl-device {
+  /* hide all the conten inside this container */
+  display: none;
 }
 
 /* MAIN BODY */
@@ -108,7 +133,7 @@ span {
 
 img {
   max-width: 100%;
-  padding: .5em 0;
+  margin: .5em 0;
 }
 
 hr {
@@ -135,8 +160,16 @@ main li {
 
 footer {
   text-align: center;
+  font-style: italic;
   color: #fff;
   background-color: #212121;
+}
+
+/* CLEARFIX */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* MEDIA QUERIES */
@@ -145,6 +178,100 @@ footer {
     /* set width and conter the container */
     width: 80%;
     margin: 0 auto;
+    padding-top: 3.5em;
+    padding-bottom: 3em;
+  }
+
+  header .container {
+    padding: .5em .5em;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .col {
+    width: 50%;
+    float: left;
+    padding: 1em .5em;
+  }
+
+  .nav-bar {
+    z-index: 1000;
+    background-color: #212121;
+    /* center the svg */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+  }
+
+  .nav-bar ul {
+    padding-top: .5em;
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    width: 70px;
+    margin: 0;
+  }
+
+  figure img {
+    box-shadow: 5px 10px 18px #888;
+  }
+
+  hr {
+    margin: 3em 0;
+  }
+
+  figure span {
+    display: block;
+  }
+
+  .nav-bar ul {
+    float: right;
+  }
+
+  .nav-bar p {
+    display: none;
+  }
+
+  .nav-bar a {
+    background-color: transparent;
+  }
+
+  .nav-bar li {
+    display: inline-block;
+    margin-left: 2em;
+    background-color: none;
+  }
+
+  footer .container {
+    padding: 1em 0;
+  }
+
+  .xxl-device {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    box-shadow: inset 1px 7px 4px #fff;
+  }
+
+  .xxl-device h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    margin-top: 3em;
+    font-weight: 300;
   }
 
 }
