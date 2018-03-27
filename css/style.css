@@ -183,7 +183,14 @@ main ul {
 }
 
 main li {
+  padding-top: .5em;
+  padding-bottom: .5em;
   list-style-type: square;
+}
+
+main li:nth-child(2n +1) {
+  background-color: #C9C9C9;
+  box-shadow: inset -45px 0 45px -5px #e3e3e3;
 }
 
 /* target the first column inside of the container */
