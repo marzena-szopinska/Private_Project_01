@@ -119,6 +119,16 @@ header, footer {
   -webkit-animation-iteration-count: infinite;
 }
 
+.back-button  {
+  transition: transform .2s ease-out,
+  color .2s ease-out;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+  color: gray;
+}
+
 @-webkit-keyframes arrow {
     0% {
         opacity: 0.3;
@@ -150,7 +160,9 @@ header, footer {
 /* MAIN BODY */
 
 h2 {
-  margin-bottom: .5em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 p {
@@ -170,6 +182,10 @@ img {
 
 figure {
   text-align: center;
+}
+
+figure img {
+  box-shadow: 5px 10px 18px #888;
 }
 
 hr {
@@ -271,10 +287,6 @@ footer {
     margin: 0;
   }
 
-  figure img {
-    box-shadow: 5px 10px 18px #888;
-  }
-
   hr {
     margin: 3em 0;
   }
@@ -327,4 +339,15 @@ footer {
     font-weight: 300;
   }
 
+}
+
+
+@media (min-width: 1024px) {
+  .nav-bar a {
+    padding: 15px 10px;
+  }
+
+  .container {
+    width: 90%;
+  }
 }
