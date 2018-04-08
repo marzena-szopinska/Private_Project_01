@@ -11,16 +11,17 @@ body {
   background-color: #E3E3E3;
   line-height: 1.5;
   letter-spacing: 0.065em;
+  text-align: center;
 }
 
 .nav-bar a:hover {
-  transform: scale(1.20);
+  color: gray;
 }
 
 a {
   text-decoration: none;
   color: #fff;
-  transition: transform .4s ease;
+  transition: color .2s ease-out;
 }
 
 .container {
@@ -185,7 +186,7 @@ main ul {
 main li {
   padding-top: .5em;
   padding-bottom: .5em;
-  list-style-type: square;
+  list-style-type: none;
 }
 
 main li:nth-child(2n +1) {
